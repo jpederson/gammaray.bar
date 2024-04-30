@@ -1,0 +1,36 @@
+
+
+// set colors
+$green: #b5fb8f;
+$green-dark: #415d31;
+$purple: #813996;
+$purple-dark: darken( $purple, 5% );
+$purple-darker: darken( $purple, 8% );
+
+
+// breakpoints
+$bp-s: 600px;
+$bp-m: 768px;
+$bp-l: 1024px;
+$bp-xl: 1150px;
+$bp-xxl: 1440px;
+$bp-xxxl: 1680px;
+$bp-xxxxl: 2250px;
+$bp-tv: 2650px;
+
+
+// import all the things
+@import "mixins", "fonts", "reset", "button", "base", "grid", "form";
+
+
+// import layout components
+@import "header", "content", "sidebar", "footer";
+
+
+// import custom post type styles
+@import "shows";
+
+
+// import lightbox styles
+@import "magnific";
+

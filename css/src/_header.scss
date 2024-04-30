@@ -1,0 +1,148 @@
+
+
+header {
+	position: relative;
+	background: $purple-darker;
+	border-bottom: 3px solid rgba( black, .2 );
+	box-shadow: 0 0 20px rgba( black, .2 );
+
+	@include respond-to( $bp-m ) {
+		display: flex;
+		align-items: last baseline;
+		justify-content: flex-end;
+	}
+
+	@include respond-to( $bp-l ) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		display: block;
+		width: 280px;
+
+		background: transparent;
+		border-bottom: none;
+		box-shadow: none;
+	}
+
+	@include respond-to( $bp-xxl ) {
+		left: 10px;
+		width: 370px;
+	}
+
+	.logo {
+		padding: 20px 60px 5px 20px;
+
+		@include respond-to( $bp-s ) {
+			img {
+				max-width: 280px;
+			}
+		}
+
+		@include respond-to( $bp-m ) {
+			flex: 1;
+			flex-basis: 65%;
+			padding: 20px 30px 10px 30px;
+
+			img {
+				max-width: 300px;
+			}
+		}
+
+		@include respond-to( $bp-l ) {
+			padding: 60px 10px 10px 30px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	nav {
+		@include clearfix;
+		position: relative;
+		
+		@include respond-to( $bp-m ) {
+			flex: 1;
+			flex-basis: 35%;
+		}
+
+		button {
+			position: absolute;
+			right: 10px;
+			top: -60px;
+			width: 40px;
+			height: 40px;
+			border: 0;
+			padding: 0;
+			color: transparent;
+			background: url(../img/icon-menu.png) center center no-repeat;
+			overflow: hidden;
+			text-indent: 1000px;
+			
+			@include respond-to( $bp-s ) {
+				right: 20px;
+			}
+
+			@include respond-to( $bp-m ) {
+				display: none;
+			}
+		}
+
+		.nav-menu {
+			display: none;
+			position: relative;
+			z-index: 1000;
+
+			@include respond-to( $bp-m ) {
+				display: block;
+				background: transparent;
+			}
+	
+			li {
+				a {
+					@include font;
+					display: block;
+					padding: 15px 5px;
+					font-size: 20px;
+					line-height: 24px;
+					color: white;
+					text-decoration: none;
+					text-transform: uppercase;
+					width: 100%;
+					transition: 400ms background-color ease-in-out;
+					background-color: transparent;
+					text-align: center;
+					transition: all 400ms ease-in-out;
+
+					@include respond-to( $bp-m ) {
+						text-align: right;
+						padding: 12px 40px;
+					}
+
+					@include respond-to( $bp-l ) {
+						text-align: left;
+						padding: 12px 40px;
+					}
+
+					&:hover {
+						background-color: darken( $purple, 10% );
+						@include font-bold;
+						letter-spacing: 2px;
+
+						@include respond-to( $bp-m ) {
+							background: transparent;
+							padding-right: 50px;
+							padding-left: 0;
+						}
+
+						@include respond-to( $bp-l ) {
+							padding-left: 50px;
+							padding-right: 0;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}

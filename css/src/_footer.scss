@@ -1,0 +1,21 @@
+
+
+footer {
+	@include clearfix;
+	@include padding;
+	line-height: 1.5em;
+	background: $purple-darker;
+	color: rgba( white, .6 );
+	border-top: 3px solid rgba( black, .2 );
+	box-shadow: 0 0 30px rgba( black, .2 );
+
+	a {
+		color: $green-dark;
+	}
+
+	.copyright {
+		font-size: .85em;
+		opacity: .5;
+	}
+}
+

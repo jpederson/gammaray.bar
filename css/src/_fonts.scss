@@ -1,0 +1,44 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@mixin font-thin {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+}
+
+@mixin font-thin-italic {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+@mixin font {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+
+@mixin font-italic {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin font-bold {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+}
+
+@mixin font-bold-italic {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+@mixin font-oswald {
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
