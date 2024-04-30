@@ -1,11 +1,3 @@
-## wp-pure
+## gammaray.bar
 
-A simple WordPress theme development framework - with a few helpful built-in shortcodes, Sass, Minify, and everything you'll need to build a new theme.
-
-```shell
-cd wp-content/themes/
-composer create-project jpederson/wp-pure
-npm install
-```
-
-Then, to start editing, just run `grunt`.
+A music venue WordPress theme for Gamma Ray Bar in Madison, WI. All branding is property of its respective owner, but the code is open sourced and can be freely used to create your own themes!
