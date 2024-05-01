@@ -97,14 +97,15 @@
 
 .container {
 	min-width: 320px;
-}
 
-
-.content {
-	@include respond-to( $bp-l ) {
-		min-height: 100vh;
+	& > .content {
+		@include respond-to( $bp-l ) {
+			min-height: 100vh;
+		}
 	}
 }
+
+
 
 
 .main-content {
