@@ -39,7 +39,7 @@ get_header();
                     <div class="info">
                         <h1 class="show-title"><?php the_title(); ?></h1>
                         <p><span class="label">Show Date:</span>
-                            <?php the_field( 'show_date' ); ?></p>
+                            <?php print str_replace( ':00', '', date( "F j, Y @ g:i a", strtotime( get_field( 'show_date' ) ) ) ); ?></p>
                         <p><span class="label">Price:</span>
                             <?php if ( empty( $price_advance ) && empty( $price_door ) && empty( $price_virtual ) ) { print "TBA"; } ?>
                             <?php if ( !empty( $price_advance ) ) { ?>$<?php print $price_advance; ?> <span class="light">advance</span><?php } ?>
@@ -54,15 +54,46 @@ get_header();
 				    <?php the_content(); ?>
                 </div>
                 <?php 
-                $artists = get_field( 'acts' );
-                if ( !empty ( $acts ) ) { ?>
+                if ( have_rows( 'acts' ) ) { ?>
                 <div class="artist-info">
-                    <h2>Artist Information</h2>
+                    <p class="label">Artist Information:</p>
                     <div class="artist-list">
                     <?php 
-                    foreach ( $acts as $act ) {
-
-                    }
+                    while( have_rows( 'acts' ) ) : the_row();
+                        $name = get_sub_field('name');
+                        $photo = get_sub_field('photo');
+                        $bio = get_sub_field('bio');
+                        ?>
+                        <div class="act">
+                            <?php if ( !empty( $photo ) ) { ?>
+                            <div class="act-photo">
+                                <img src="<?php print $photo ?>" alt="<?php print $name; ?>">
+                            </div>
+                            <?php } ?>
+                            <div class="act-info">
+                                <h3><?php print $name; ?></h3>
+                                <?php if ( have_rows( 'socials' ) ) : ?>
+                                    <div class="socials">
+                                    <?php
+                                    while( have_rows( 'socials' ) ) : the_row();
+                                        $network = get_sub_field('network');
+                                        $network_link = get_sub_field('link');
+                                    ?>
+                                    <a href="<?php print $network_link ?>" target="_blank"><img src="<?php print get_bloginfo('template_url') . '/img/social/' . $network['value'] ?>.svg" title="<?php print $network['label'] ?>" /></a>
+                                    <?php
+                                    endwhile;
+                                    ?>
+                                    </div>
+                                    <?php
+                                endif;
+                                if ( !empty( $bio ) ) { ?>
+                                <p><?php print $bio; ?></p>
+                                <?php }
+                                ?>
+                            </div>
+                        </div>
+                        <?php
+                    endwhile;
                     ?>
                     </div>
                 </div>

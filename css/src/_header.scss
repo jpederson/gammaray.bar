@@ -68,16 +68,18 @@ header {
 
 		button {
 			position: absolute;
-			right: 10px;
-			top: -60px;
-			width: 40px;
-			height: 40px;
+			right: 15px;
+			top: -50px;
+			width: 35px;
+			height: 35px;
 			border: 0;
 			padding: 0;
 			color: transparent;
-			background: url(../img/icon-menu.png) center center no-repeat;
+			background: transparent url(../img/icon-menu.svg) center center no-repeat;
+			background-size: contain;
 			overflow: hidden;
 			text-indent: 1000px;
+			box-shadow: none;
 			
 			@include respond-to( $bp-s ) {
 				right: 20px;

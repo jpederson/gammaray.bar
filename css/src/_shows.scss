@@ -119,15 +119,15 @@
         }
     }
 
-    @include respond-to( $bp-xxl ) {
+    @include respond-to( $bp-xl ) {
         
         .thumbnail {
-            flex: 0 1 30%;
+            flex: 0 1 375px;
             margin-right: 3%;
         }
 
         .info {
-            flex: 0 1 67%;
+            flex: 1 1;
         }
 
     }
@@ -176,5 +176,57 @@
 
     @include respond-to( $bp-xl ) {
         padding: 60px 0;
+    }
+
+    .act {
+        padding: 15px 0;
+
+        @include respond-to( $bp-s ) {
+            display: flex;
+        }
+
+        .act-photo {
+            text-align: center;
+
+            img {
+                border: 10px solid rgba( white, .3 );
+            }
+
+            @include respond-to( $bp-s ) {
+                flex: 0 1 160px;
+                margin-right: 3%;
+            }
+        }
+
+        .act-info {
+            text-align: center;
+            
+            @include respond-to( $bp-s ) {
+                flex: 1 1;
+                text-align: left;
+            }
+
+            h3 {
+                @include font-bold;
+                font-size: 1.4em;
+                text-transform: uppercase;
+                padding: 10px 0;
+            }
+
+            .socials {
+                a {
+                    opacity: .7;
+                    transition: opacity 400ms ease-in-out;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                img {
+                    width: 50px;
+                }
+            }
+        }
     }
 }
