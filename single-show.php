@@ -72,7 +72,9 @@ get_header();
                             <?php } ?>
                             <div class="act-info">
                                 <h3><?php print $name; ?></h3>
-                                <?php if ( have_rows( 'socials' ) ) : ?>
+                                <?php 
+                                if ( !empty( $bio ) ) { print $bio; }
+                                if ( have_rows( 'socials' ) ) : ?>
                                     <div class="socials">
                                     <?php
                                     while( have_rows( 'socials' ) ) : the_row();
@@ -86,9 +88,6 @@ get_header();
                                     </div>
                                     <?php
                                 endif;
-                                if ( !empty( $bio ) ) { ?>
-                                <p><?php print $bio; ?></p>
-                                <?php }
                                 ?>
                             </div>
                         </div>

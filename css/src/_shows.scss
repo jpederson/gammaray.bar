@@ -210,10 +210,12 @@
                 @include font-bold;
                 font-size: 1.4em;
                 text-transform: uppercase;
-                padding: 10px 0;
+                padding: 10px 0 0;
             }
 
             .socials {
+                padding: 10px 0 0;
+                
                 a {
                     opacity: .7;
                     transition: opacity 400ms ease-in-out;
