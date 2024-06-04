@@ -9,7 +9,6 @@ add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 // let's create the function for the custom type
 function show_post_type() { 
 
-
 	// creating (registering) the custom type 
 	register_post_type( 'show', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type

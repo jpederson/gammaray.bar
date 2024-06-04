@@ -74,6 +74,14 @@
 			}
 		}
 	}
+
+	input[type=text], input[type=search], select, textarea {
+		@extend .text-field;
+	}
+	
+	button, input[type=submit] {
+		@extend .btn;
+	}
 }
 
 
@@ -135,5 +143,59 @@
 			text-align: left;
 		}
 	}
+}
+
+
+
+
+.content-one {
+    @extend .content-style;
+}
+
+
+.content-two-container {
+    .content-two {
+		.column {
+			@extend .content-style;
+		}
+
+        &.vcenter {
+            align-items: center;
+        }
+
+        @include respond-to( $bp-m ) {
+            display: flex;
+
+            .column {
+                flex: 1;
+            }
+
+            &.large-right {
+                .column {
+                    &:first-child {
+                        flex-basis: 30%;
+                        margin-right: 5%;
+                    }
+
+                    &:nth-child(2) {
+                        flex-basis: 65%;
+                    }
+                }
+            }
+
+            &.large-left {
+                .column {
+                    &:first-child {
+                        flex-basis: 65%;
+                        margin-right: 5%;
+                    }
+
+                    &:nth-child(2) {
+                        flex-basis: 30%;
+                    }
+                }
+            }
+        }
+    }
 }
 

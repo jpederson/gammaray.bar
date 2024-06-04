@@ -14,7 +14,7 @@ function require_multi( $files ) {
 
 
 // include utility functions
-require_multi( 'core', 'images', 'paginate', 'button' );
+require_multi( 'core', 'images', 'paginate', 'button', 'components' );
 
 
 // include the post types

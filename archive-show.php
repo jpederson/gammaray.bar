@@ -35,14 +35,14 @@ query_posts( $args );
 				
                 // get the thumbnail
 				$thumbnail_url = ( has_post_thumbnail() ? get_the_post_thumbnail_url() : get_field( 'default_event_image', 'option' ) );
-				;
 				?>
-				<div class="show">
-					<a href="<?php the_permalink(); ?>"><img src="<?php print $thumbnail_url; ?>" class="post-thumbnail"></a>
-					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<div class="show-date"><?php print '<span>Show:</span> ' . $date_formatted . '<br><span>Doors:</span> ' . $doors_time; ?></div>
-				</div>
+			<div class="show">
+				<a href="<?php the_permalink(); ?>"><img src="<?php print $thumbnail_url; ?>" class="post-thumbnail"></a>
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<div class="show-date"><?php print '<span>Show:</span> ' . $date_formatted . '<br><span>Doors:</span> ' . $doors_time; ?></div>
+			</div>
 				<?php
+
 			endwhile;
 
 		else :

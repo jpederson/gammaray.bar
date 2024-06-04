@@ -17,6 +17,8 @@ get_header();
 		endwhile;
 	endif;
 
+	get_components();
+
 	?>
 </div><!-- #content -->
 
@@ -24,4 +26,3 @@ get_header();
 
 get_footer();
 
-?>

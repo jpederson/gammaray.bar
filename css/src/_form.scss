@@ -2,24 +2,15 @@
 
 .text-field {
 	@include font;
-	display: inline-block;
-	padding: 10px 12px;
-	max-width: 100%;
-	font-size: 15px;
-	line-height: 30px;
-	border: 3px solid rgba( black, .4 );
-	background: rgba( black, .2 );
-	color: white;
+	height: auto !important;
+	padding: 10px 12px !important;
+	max-width: 100% !important;
+	font-size: 15px !important;
+	line-height: 28px !important;
+	border: 3px solid rgba( black, .4 ) !important;
+	background: rgba( black, .2 ) !important;
+	color: white !important;
 }
-
-input[type=text], input[type=search], select {
-	@extend .text-field;
-}
-
-button, input[type=submit] {
-	@extend .btn;
-}
-
 
 .gform_wrapper {
 	margin: 20px 0;
@@ -115,7 +106,6 @@ button, input[type=submit] {
 		input[type=submit], input[type=button], input[type=reset], button, .gform_button, .button {
 			@extend .btn;
 			transition: opacity 400ms ease-in-out !important;
-			opacity: .6 !important;
 			background-color: $green !important;
 			color: black !important;
 			text-transform: uppercase !important;
@@ -124,12 +114,13 @@ button, input[type=submit] {
 
 			&:hover {
 				opacity: 1 !important;
+				opacity: .6 !important;
 			}
 		}
 	}
 
 	.gfield_label {
-		color: rgba( white, .5 );
+		color: rgba( white, .6 ) !important;
 	}
 
 }
