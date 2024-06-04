@@ -191,7 +191,7 @@ acf_add_local_field_group(array(
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
-						'width' => '40',
+						'width' => '30',
 						'class' => '',
 						'id' => '',
 					),
@@ -219,7 +219,7 @@ acf_add_local_field_group(array(
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
-						'width' => '60',
+						'width' => '70',
 						'class' => '',
 						'id' => '',
 					),
@@ -344,7 +344,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1717521754,
+	'modified' => 1717521802,
 ));
 
 endif;
