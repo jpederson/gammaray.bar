@@ -30,6 +30,6 @@ register_sidebar( array(
 // load all field sets from php in theme
 add_filter('acfe/settings/php_load', 'my_acfe_php_load_point');
 function my_acfe_php_load_point($paths){
-    $paths[] = plugin_dir_path(__FILE__) . 'includes/acfe-php';
+    $paths[] = get_stylesheet_path() . '/acfe-php';
     return $paths;    
 }
