@@ -144,7 +144,7 @@ acf_add_local_field_group(array(
 			'aria-label' => '',
 			'type' => 'repeater',
 			'instructions' => '',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
@@ -154,11 +154,11 @@ acf_add_local_field_group(array(
 			'acfe_repeater_stylised_button' => 0,
 			'layout' => 'block',
 			'pagination' => 0,
-			'rows_per_page' => 20,
-			'min' => 1,
+			'min' => 0,
 			'max' => 0,
 			'collapsed' => 'field_661abbc9e6f3b',
 			'button_label' => 'Add Row',
+			'rows_per_page' => 20,
 			'sub_fields' => array(
 				array(
 					'key' => 'field_661abbc9e6f3b',
@@ -344,7 +344,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1717521802,
+	'modified' => 1719190810,
 ));
 
 endif;
