@@ -7,7 +7,14 @@ $the_query = new WP_Query( array(
     'post_type' => 'show',
 	'meta_key' => 'show_date',
     'orderby' => 'meta_value',
-    'order' => 'ASC'
+    'order' => 'ASC',
+	'meta_query' => array(
+		array(
+			'key' => 'show_date',
+			'value' => wp_date( 'Y-m-d H:i:s' ),
+			'compare' => '>='
+		)                   
+	)
 ) );
 query_posts( $args );
 
@@ -46,6 +53,6 @@ if ( $the_query->have_posts() ) :
     <?php
 else :
 
-    print "<p>There are currently no posts to list here.</p>";
+    print "<p>No upcoming shows - come back soon for more!</p>";
 
 endif;

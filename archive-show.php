@@ -9,7 +9,14 @@ global $wp_query;
 $args = array_merge( $wp_query->query_vars, array(
 	'meta_key' => 'show_date',
     'orderby' => 'meta_value',
-    'order' => 'ASC'
+    'order' => 'ASC',
+	'meta_query' => array(
+		array(
+			'key' => 'show_date',
+			'value' => wp_date( 'Y-m-d H:i:s' ),
+			'compare' => '>='
+		)                   
+	),
 ) );
 query_posts( $args );
 
@@ -19,10 +26,11 @@ query_posts( $args );
 		<h1>Upcoming Shows</h1>
 		<hr>
 
-		<div class="show-listing">
 		<?php 
 		if ( have_posts() ) : 
-
+		?>
+		<div class="show-listing">
+			<?php
 			// Start the Loop.
 			while ( have_posts() ) : the_post(); 
 
@@ -44,15 +52,16 @@ query_posts( $args );
 				<?php
 
 			endwhile;
+			?>
+		</div>
+		<?php
+		else:
 
-		else :
-
-			print "<p>There are currently no posts to list here.</p>";
+			print "<p>No upcoming shows - come back soon for more!</p>";
 
 		endif;
 		?>
 
-		</div>
 	</div><!-- #primary -->
 
 	<?php paginate(); ?>
