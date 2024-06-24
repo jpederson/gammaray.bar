@@ -4,7 +4,7 @@
 $title = get_sub_field( 'title' );
 
 // get current timestamp minus 6 hours
-$start_time = current_time( 'timestamp' )-7200;
+$start_time = current_time( 'timestamp' ) - ( 3600*6 );
 
 // query shows
 $the_query = new WP_Query( array(
