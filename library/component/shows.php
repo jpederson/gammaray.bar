@@ -1,6 +1,10 @@
 <?php
 
+// get the title
 $title = get_sub_field( 'title' );
+
+// get current timestamp minus 6 hours
+$start_time = current_time( 'timestamp' )-7200;
 
 // query shows
 $the_query = new WP_Query( array(
@@ -11,7 +15,7 @@ $the_query = new WP_Query( array(
 	'meta_query' => array(
 		array(
 			'key' => 'show_date',
-			'value' => wp_date( 'Y-m-d H:i:s' ),
+			'value' => wp_date( 'Y-m-d H:i:s', $start_time ),
 			'compare' => '>='
 		)                   
 	)

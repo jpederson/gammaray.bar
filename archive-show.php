@@ -5,6 +5,9 @@
 
 get_header(); 
 
+// get current timestamp minus 6 hours.
+$start_time = current_time( 'timestamp' )-7200;
+
 global $wp_query;
 $args = array_merge( $wp_query->query_vars, array(
 	'meta_key' => 'show_date',
@@ -13,7 +16,7 @@ $args = array_merge( $wp_query->query_vars, array(
 	'meta_query' => array(
 		array(
 			'key' => 'show_date',
-			'value' => wp_date( 'Y-m-d H:i:s' ),
+			'value' => wp_date( 'Y-m-d H:i:s', $start_time ),
 			'compare' => '>='
 		)                   
 	),
