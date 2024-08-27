@@ -12,6 +12,7 @@ global $wp_query;
 $args = array_merge( $wp_query->query_vars, array(
 	'meta_key' => 'show_date',
     'orderby' => 'meta_value',
+	'posts_per_page' => 50,
     'order' => 'ASC',
 	'meta_query' => array(
 		array(
